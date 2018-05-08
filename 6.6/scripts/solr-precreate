@@ -21,4 +21,6 @@ fi
 
 /opt/docker-solr/scripts/precreate-core "$@"
 
-exec solr -f
+# Don't want to start the server in the pre-create script.  It breaks looping through creating multiple cores.
+# Will start in main
+# exec solr -f
